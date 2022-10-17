@@ -1,0 +1,32 @@
+Source: safe-iop
+Section: libs
+Priority: optional
+Maintainer: Kai-Chung Yan <seamlikok@gmail.com>
+Build-Depends: debhelper (>=9)
+Standards-Version: 3.9.6
+Homepage: https://code.google.com/p/safe-iop
+Vcs-Git: https://github.com/seamlik/debianpkg-safe-iop.git
+Vcs-Browser: https://github.com/seamlik/debianpkg-safe-iop
+
+Package: libsafe-iop0
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Safe integer operation library for C - Dynamic library
+ This library provides a collection of (macro-based) functions for performing
+ safe integer operations across platform and architecture with a straightforward
+ API.
+ .
+ This package provides the dynamically linked library. The dynamic library
+ supplies a format-string based interface which is in pre-alpha.
+
+Package: libsafe-iop-dev
+Section: libdevel
+Architecture: any
+Depends: libsafe-iop0 (= ${binary:Version}), ${misc:Depends}
+Description: Safe integer operation library for C - Development files
+ This library provides a collection of (macro-based) functions for performing
+ safe integer operations across platform and architecture with a straightforward
+ API.
+ .
+ This package provides the development files for the dynamic library as well as
+ the header-only library.
